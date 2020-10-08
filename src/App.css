@@ -71,6 +71,9 @@ main {
   -webkit-overflow-scrolling: touch;
   -webkit-transform: translate3d(0,0,0);
 }
+.inner {
+  height: calc(100% + 1px);
+}
 
 main::-webkit-scrollbar {
   width: 0.25rem;
