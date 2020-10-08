@@ -68,6 +68,7 @@ main {
   flex-direction: column;
 
   -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3d(0,0,0);
 }
 
 main::-webkit-scrollbar {
