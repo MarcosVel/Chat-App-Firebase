@@ -47,7 +47,16 @@ function SignIn() {
   }
 
   return (
-    <button className='btnGoogle btnSignIn' onClick={ signInWithGoogle }>Sign in with Google</button>
+    <>
+      <button className='btnGoogle btnSignIn' onClick={ signInWithGoogle }>Sign in with Google</button>
+      <div className='infoChat'>
+        <h2>Sobre o chat</h2>
+        <p>Este é um chat <strong>"global"</strong>. <br />
+            Sua <strong>foto do gmail e sua mensagem</strong> estarão disponíveis para todos os usuários que decidirem acessar. <br />
+            Sinta-se a vontade para marcar sua presença de uma boa forma
+        </p>
+      </div>
+    </>
   )
 }
 

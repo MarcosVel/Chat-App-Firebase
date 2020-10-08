@@ -8,6 +8,16 @@
   --placeholder-color: #999999;
 }
 
+.infoChat {
+  color: white;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.infoChat p {
+  font-size: 17px;
+  line-height: 1.75em;
+}
+
 body {
   background-color: #282c34;
 }
@@ -180,6 +190,7 @@ p {
 .received p {
   background: var(--msg-receved-color);
   color: #fff;
+  text-align: start;
 }
 
 img {
@@ -197,7 +208,7 @@ img {
 
 .btnSignIn {
   width: 250px;
-  margin: auto;
+  margin: 30px auto 0 auto;
 }
 
 ::-webkit-input-placeholder {
