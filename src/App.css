@@ -239,7 +239,7 @@ img {
 
   main {
     padding: 50px 10px;
-    height: 82vh;
+    /* height: 82vh; */
   }
 
   .sent p,
