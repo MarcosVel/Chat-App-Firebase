@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 <br /><br />
+Project: https://chat-marquin.netlify.app/
+<br /><br />
 Video teaching: https://youtu.be/zQyrwxMPm88
 
 ## Available Scripts
