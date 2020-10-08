@@ -1,3 +1,13 @@
+:root {
+  --main-color: #2a2a2a;
+  --form-color: #373737;
+  --components-color: #555555;
+  --border-color: #62e200e3;
+  --msg-receved-color: #707070;
+  --msg-sent-color: #e5e5ea;
+  --placeholder-color: #999999;
+}
+
 body {
   background-color: #282c34;
 }
@@ -9,8 +19,8 @@ body {
 }
 
 .App header {
-  background-color: #181717;
-  height: 10vh;
+  background-color: var(--form-color);
+  /* height: 10vh; */
   min-height: 50px;
   color: white;
   position: fixed;
@@ -21,8 +31,12 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 99;
-  padding: 10px;
+  padding: 10px 17px;
   box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0px;
 }
 
 .App section {
@@ -30,13 +44,13 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(40, 37, 53);
+  background-color: var(--main-color);
 }
 
 main {
-  padding: 10px;
-  height: 80vh;
-  margin: 10vh 0 10vh;
+  padding: 0 10px;
+  height: 85vh;
+  margin: 5px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -51,42 +65,63 @@ main::-webkit-scrollbar-track {
 }
 
 main::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: var(--border-color);
 }
 
 form {
-  height: 10vh;
+  height: 60px;
+  width: 100%;
   position: fixed;
   bottom: 0;
-  background-color: rgb(24, 23, 23);
-  width: 100%;
+  background-color: var(--form-color);
   max-width: 728px;
   display: flex;
   font-size: 1.5rem;
 }
 
 form button {
-  width: 20%;
-  background-color: rgb(56, 56, 143);
+  width: auto;
+  height: auto;
+  background-color: var(--components-color);
+  font-size: 1.5rem;
+  margin: 5px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
 }
-
 
 input {
   line-height: 1.5;
   width: 100%;
   font-size: 1.5rem;
-  background: rgb(58, 58, 58);
+  background: var(--components-color);
   color: white;
   outline: none;
   border: none;
-  padding: 0 10px;
+  padding: 0 20px;
+
+  margin: 5px;
+  border-radius: 40px;
+  /* flex: 1 auto; */
+  /* overflow: auto;
+  text-align: start; */
 }
 
+/* input::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+input::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+input::-webkit-scrollbar-thumb {
+  background: #6649b8;
+} */
+
 button {
-  background-color: #282c34; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 7px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -100,14 +135,15 @@ button:disabled {
 }
 
 
-.sign-in {
+/* .sign-in {
   color: #282c34;
   background: white;
   max-width: 400px;
   margin: 0 auto;
-}
+} */
 
-ul, li {
+ul,
+li {
   text-align: left;
   list-style: none;
 }
@@ -134,13 +170,16 @@ p {
 }
 
 .sent p {
-  color: white;
-  background: #0b93f6;
+  color: #000;
+  background: var(--msg-sent-color);
   align-self: flex-end;
+  word-wrap: break-word;
+  text-align: start;
 }
+
 .received p {
-  background: #e5e5ea;
-  color: black;
+  background: var(--msg-receved-color);
+  color: #fff;
 }
 
 img {
@@ -148,4 +187,56 @@ img {
   height: 40px;
   border-radius: 50%;
   margin: 2px 5px;
+}
+
+.btnGoogle {
+  background-color: var(--components-color);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.btnSignIn {
+  width: 250px;
+  margin: auto;
+}
+
+::-webkit-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: var(--placeholder-color);  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: var(--placeholder-color);  
+}
+
+:-ms-input-placeholder {  
+  color: var(--placeholder-color);  
+}
+
+@media (max-width: 727px) {
+  .btnSignOut {
+    width: 100px;
+    padding: 9px;
+  }
+
+  header h1 {
+    font-size: 21px;
+  }
+
+  main {
+    padding: 50px 10px;
+    height: 82vh;
+  }
+
+  .sent p,
+  .received p {
+    max-width: 200px;
+  }
+
+  form {
+    padding-bottom: 5px;
+  }
 }

@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>⚛️🔥💬</h1>
+        <h1>Chat do Marquin 💬</h1>
         <SignOut />
       </header>
 
@@ -47,14 +47,14 @@ function SignIn() {
   }
 
   return (
-    <button onClick={ signInWithGoogle }>Sign in with Google</button>
+    <button className='btnGoogle btnSignIn' onClick={ signInWithGoogle }>Sign in with Google</button>
   )
 }
 
 function SignOut() {
   return auth.currentUser && (
 
-    <button onClick={ () => auth.signOut() }>Sign Out</button>
+    <button className='btnGoogle btnSignOut' onClick={ () => auth.signOut() }>Sign Out</button>
   )
 }
 
@@ -63,7 +63,7 @@ function ChatRoom() {
   const dummy = useRef()
 
   const messagesRef = firestore.collection('messages');
-  const query = messagesRef.orderBy('createdAt').limit(25);
+  const query = messagesRef.orderBy('createdAt');
 
   const [ messages ] = useCollectionData(query, { idField: 'id' });
 
@@ -99,9 +99,9 @@ function ChatRoom() {
 
       <form onSubmit={ sendMessage }>
 
-        <input value={ formValue } onChange={ (e) => setFormValue(e.target.value) } />
+        <input placeholder='Digite aqui...' value={ formValue } onChange={ (e) => setFormValue(e.target.value) } />
 
-        <button type='submit'>🕊</button>
+        <button type='submit'>🚀</button>
 
       </form>
     </>
