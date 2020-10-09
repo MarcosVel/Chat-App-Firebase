@@ -75,17 +75,17 @@ main {
   height: calc(100% + 1px);
 }
 
-/* main::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0.25rem;
 }
 
-main::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #1e1e24;
 }
 
-main::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: var(--border-color);
-} */
+}
 
 form {
   height: 60px;
