@@ -149,6 +149,10 @@ button {
   outline: none;
 }
 
+button:hover {
+  background-color: var(--msg-receved-color);
+}
+
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
