@@ -55,15 +55,17 @@ header h1 {
   width: 800px;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: var(--main-color);
+  height: auto;
+  overflow-y: scroll;
 }
 
 main {
-  padding: 0 10px;
-  height: 85vh;
-  margin: 5px;
-  overflow-y: scroll;
+  padding: 55px 10px;
+  /* height: 85vh; */
+  margin: 5px;  
+  /* overflow-y: scroll; */
   display: flex;
   flex-direction: column;
 
@@ -254,6 +256,7 @@ img {
   main {
     padding: 50px 10px;
     height: 82vh;
+    margin-bottom: -50px;
   }
 
   .message {
