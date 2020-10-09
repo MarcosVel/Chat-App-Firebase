@@ -75,7 +75,7 @@ main {
   height: calc(100% + 1px);
 }
 
-main::-webkit-scrollbar {
+/* main::-webkit-scrollbar {
   width: 0.25rem;
 }
 
@@ -85,7 +85,7 @@ main::-webkit-scrollbar-track {
 
 main::-webkit-scrollbar-thumb {
   background: var(--border-color);
-}
+} */
 
 form {
   height: 60px;
